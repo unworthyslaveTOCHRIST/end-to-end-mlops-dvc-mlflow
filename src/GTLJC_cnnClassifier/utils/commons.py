@@ -41,20 +41,20 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     except Exception as e:
         raise e
     
-    @ensure_annotations
-    def create_directories(path_to_directories: list, verbose = True):
-        """
-            Graciously creates a list of directories
+@ensure_annotations
+def create_directories(path_to_directories: list, verbose = True):
+    """
+        Graciously creates a list of directories
 
-            Args:
-                path_to_directories (list): list of paths of directories
-                ignore_log(bool, optional): ignore if multiple dirs are to be created, Default to False
-        """
+        Args:
+            path_to_directories (list): list of paths of directories
+            ignore_log(bool, optional): ignore if multiple dirs are to be created, Default to False
+    """
 
-        for path in path_to_directories:
-            os.makedirs(path, exist_ok=True)
-            if verbose:
-                GTLJC_logger.info(f"created directory at: {path}")
+    for path in path_to_directories:
+        os.makedirs(path, exist_ok=True)
+        if verbose:
+            GTLJC_logger.info(f"created directory at: {path}")
 
 
 @ensure_annotations
@@ -135,7 +135,7 @@ def get_size(path: Path) -> str:
 
     '''
 
-    size_in_kb = round(os.path.getsize{path}/1024)
+    size_in_kb = round(os.path.getsize(path)/1024)
     return f"~ Gracious {size_in_kb} KB"
 
 def decodeImage(imgString, fileName):

@@ -1,0 +1,9 @@
+# BY GOD'S GRACE ALONE
+
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir : artifacts/data_ingestion
+  source_URL : https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing
+  local_data_file : artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
