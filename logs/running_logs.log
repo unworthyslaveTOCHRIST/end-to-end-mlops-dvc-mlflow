@@ -16,3 +16,109 @@
 [2025-01-30 09:36:48,797: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
 
 x=============x]
+[2025-01-30 12:01:12,865: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-01-30 12:01:12,903: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-01-30 12:01:12,907: INFO: commons: created directory at: artifacts]
+[2025-01-30 12:01:12,918: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-01-30 12:50:05,827: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-01-30 12:50:05,831: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-01-30 12:50:05,833: INFO: commons: created directory at: artifacts]
+[2025-01-30 12:50:05,835: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-01-30 12:50:06,456: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-01-30 13:02:46,583: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-01-30 13:02:46,583: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-01-30 13:02:46,599: INFO: commons: created directory at: artifacts]
+[2025-01-30 13:02:46,602: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-01-30 13:02:47,416: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-01-30 13:07:23,813: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-01-30 13:07:23,818: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-01-30 13:07:23,821: INFO: commons: created directory at: artifacts]
+[2025-01-30 13:07:23,824: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-01-30 13:07:24,606: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-15 03:40:24,950: ERROR: main: name 'STAGE_NAME' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    GTLJC_logger.info(f'>>>>>>> stage: {STAGE_NAME} started <<<<<<<')
+NameError: name 'STAGE_NAME' is not defined
+[2025-02-15 03:41:34,734: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 03:41:34,753: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 03:41:34,756: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 03:41:34,764: INFO: commons: created directory at: artifacts]
+[2025-02-15 03:41:34,766: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 03:41:34,767: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 03:41:34,793: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export-download&id=1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A01F4EB8E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))]
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\socket.py", line 914, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001A01F4EB8E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export-download&id=1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A01F4EB8E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix,zip_download_dir)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export-download&id=1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A01F4EB8E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2025-02-15 03:42:19,943: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 03:42:19,947: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 03:42:19,953: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 03:42:19,954: INFO: commons: created directory at: artifacts]
+[2025-02-15 03:42:19,956: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 03:42:19,956: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 03:43:05,264: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 03:43:06,549: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 03:43:06,549: INFO: main: *************************************]
+[2025-02-15 03:43:06,556: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-02-15 03:43:06,564: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 03:43:06,571: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 03:43:06,571: INFO: commons: created directory at: artifacts]
+[2025-02-15 03:43:06,573: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-02-15 03:43:08,411: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-15 03:43:09,087: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
