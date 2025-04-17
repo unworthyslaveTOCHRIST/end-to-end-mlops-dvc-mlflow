@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/FOR_CHRIST_my_LOVE/Desktop/end-to-end-mlops-dvc-mlflow/mlruns/0/15750fddd9594c79a14b94876f4c5c2f/artifacts
+end_time: 1744245420833
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 15750fddd9594c79a14b94876f4c5c2f
+run_name: nimble-zebra-72
+run_uuid: 15750fddd9594c79a14b94876f4c5c2f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744245420688
+status: 3
+tags: []
+user_id: FOR_CHRIST_my_LOVE

@@ -122,3 +122,893 @@ x=============x]
 [2025-02-15 03:43:09,087: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
 
 x=============x]
+[2025-02-15 10:17:43,467: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 10:17:43,491: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 10:17:43,508: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 10:17:43,518: INFO: commons: created directory at: artifacts]
+[2025-02-15 10:17:43,522: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 10:17:43,526: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 10:27:35,415: ERROR: main: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))]
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 444, in _error_catcher
+    yield
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\http\client.py", line 454, in read
+    n = self.readinto(b)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\http\client.py", line 498, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\response.py", line 461, in _error_catcher
+    raise ProtocolError("Connection broken: %r" % e, e)
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix,zip_download_dir)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+[2025-02-15 10:28:36,731: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 10:28:36,735: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 10:28:36,740: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 10:28:36,740: INFO: commons: created directory at: artifacts]
+[2025-02-15 10:28:36,742: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 10:28:36,743: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:15:53,605: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 11:15:53,608: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:15:53,614: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:15:53,619: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:15:53,621: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 11:15:53,621: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:18:13,044: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:18:14,769: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:18:14,769: INFO: main: *************************************]
+[2025-02-15 11:18:14,771: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-02-15 11:18:14,790: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:18:14,806: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:18:14,811: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:18:14,816: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-02-15 11:18:16,177: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-15 11:18:16,821: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:18:16,826: INFO: main: *******************************]
+[2025-02-15 11:18:16,826: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-02-15 11:18:16,829: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:18:16,832: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:18:16,832: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:18:16,836: INFO: commons: created directory at: artifacts\training]
+[2025-02-15 11:18:16,837: ERROR: main: __init__() got an unexpected keyword argument 'params_epochs']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 17, in main
+    training_config = config.get_training_config()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\config\configuration.py", line 60, in get_training_config
+    training_config = TrainingConfig(
+TypeError: __init__() got an unexpected keyword argument 'params_epochs'
+[2025-02-15 11:20:52,961: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 11:20:52,971: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:20:52,994: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:20:52,997: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:20:52,998: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 11:20:53,004: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:22:37,269: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:22:38,372: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:22:38,372: INFO: main: *************************************]
+[2025-02-15 11:22:38,377: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-02-15 11:22:38,380: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:22:38,385: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:22:38,385: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:22:38,388: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-02-15 11:22:39,537: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-15 11:22:40,105: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:22:40,105: INFO: main: *******************************]
+[2025-02-15 11:22:40,105: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-02-15 11:22:40,112: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:22:40,115: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:22:40,115: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:22:40,119: INFO: commons: created directory at: artifacts\training]
+[2025-02-15 11:22:40,120: ERROR: main: 'Training' object has no attribute 'get_base_model']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 19, in main
+    training.get_base_model()
+AttributeError: 'Training' object has no attribute 'get_base_model'
+[2025-02-15 11:23:53,304: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-02-15 11:23:53,308: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:23:53,314: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:23:53,315: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:23:53,318: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-02-15 11:23:53,318: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:25:14,523: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-02-15 11:25:15,361: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:25:15,363: INFO: main: *************************************]
+[2025-02-15 11:25:15,364: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-02-15 11:25:15,372: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:25:15,372: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:25:15,372: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:25:15,379: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-02-15 11:25:17,257: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-02-15 11:25:17,918: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-02-15 11:25:17,918: INFO: main: *******************************]
+[2025-02-15 11:25:17,927: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-02-15 11:25:17,932: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-02-15 11:25:17,937: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-02-15 11:25:17,937: INFO: commons: created directory at: artifacts]
+[2025-02-15 11:25:17,939: INFO: commons: created directory at: artifacts\training]
+[2025-02-15 11:25:18,489: ERROR: main: local variable 'train_datagenerator' referenced before assignment]
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 20, in main
+    training.train_valid_generator()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 60, in train_valid_generator
+    self.train_generator = train_datagenerator.flow_from_directory(
+UnboundLocalError: local variable 'train_datagenerator' referenced before assignment
+[2025-03-01 04:47:36,667: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 04:47:36,686: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:47:36,707: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:47:36,711: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:47:36,711: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 04:47:36,711: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:49:09,529: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:49:10,493: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:49:10,493: INFO: main: *************************************]
+[2025-03-01 04:49:10,493: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 04:49:10,500: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:49:10,508: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:49:10,516: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:49:10,516: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 04:49:11,746: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 04:49:12,284: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:49:12,284: INFO: main: *******************************]
+[2025-03-01 04:49:12,284: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 04:49:12,289: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:49:12,293: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:49:12,296: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:49:12,297: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 04:49:12,947: ERROR: main: local variable 'train_datagenerator' referenced before assignment]
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 20, in main
+    training.train_valid_generator()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 60, in train_valid_generator
+    self.train_generator = train_datagenerator.flow_from_directory(
+UnboundLocalError: local variable 'train_datagenerator' referenced before assignment
+[2025-03-01 04:50:44,587: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 04:50:44,599: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:50:44,603: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:50:44,603: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:50:44,605: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 04:50:44,605: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:53:24,291: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:53:25,120: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:53:25,120: INFO: main: *************************************]
+[2025-03-01 04:53:25,120: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 04:53:25,124: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:53:25,133: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:53:25,134: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:53:25,134: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 04:53:26,150: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 04:53:26,836: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:53:26,836: INFO: main: *******************************]
+[2025-03-01 04:53:26,838: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 04:53:26,840: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:53:26,846: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:53:26,846: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:53:26,848: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 04:53:27,379: ERROR: main: 'Training' object has no attribute 'train']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 21, in main
+    training.train()
+AttributeError: 'Training' object has no attribute 'train'
+[2025-03-01 04:55:12,526: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 04:55:12,530: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:55:12,532: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:55:12,532: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:55:12,535: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 04:55:12,536: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:56:45,595: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 04:56:46,497: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:56:46,497: INFO: main: *************************************]
+[2025-03-01 04:56:46,497: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 04:56:46,501: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:56:46,505: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:56:46,507: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:56:46,511: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 04:56:47,606: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 04:56:48,209: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 04:56:48,210: INFO: main: *******************************]
+[2025-03-01 04:56:48,210: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 04:56:48,212: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 04:56:48,219: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 04:56:48,221: INFO: commons: created directory at: artifacts]
+[2025-03-01 04:56:48,223: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 04:56:48,804: ERROR: main: 'Training' object has no attribute 'train_generator']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 21, in main
+    training.train()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 71, in train
+    self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
+AttributeError: 'Training' object has no attribute 'train_generator'
+[2025-03-01 05:02:25,014: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 05:02:25,014: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:02:25,032: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:02:25,033: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:02:25,035: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 05:02:25,036: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:04:31,017: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:04:31,768: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:04:31,768: INFO: main: *************************************]
+[2025-03-01 05:04:31,768: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 05:04:31,783: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:04:31,786: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:04:31,789: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:04:31,789: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 05:04:32,770: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 05:04:33,405: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:04:33,405: INFO: main: *******************************]
+[2025-03-01 05:04:33,405: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 05:04:33,410: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:04:33,412: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:04:33,412: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:04:33,416: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 05:04:33,963: ERROR: main: local variable 'train_datagenerator' referenced before assignment]
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 20, in main
+    training.train_valid_generator()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 60, in train_valid_generator
+    self.train_generator = train_datagenerator.flow_from_directory(
+UnboundLocalError: local variable 'train_datagenerator' referenced before assignment
+[2025-03-01 05:30:48,371: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 05:30:48,371: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:30:48,384: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:30:48,384: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:30:48,384: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 05:30:48,388: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:31:11,811: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:31:12,739: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:31:12,739: INFO: main: *************************************]
+[2025-03-01 05:31:12,744: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 05:31:12,747: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:31:12,752: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:31:12,752: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:31:12,752: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 05:31:13,931: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 05:31:14,405: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:31:14,405: INFO: main: *******************************]
+[2025-03-01 05:31:14,407: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 05:31:14,409: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:31:14,411: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:31:14,411: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:31:14,414: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 05:31:15,003: ERROR: main: 'Training' object has no attribute 'train_datagenerator']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 20, in main
+    training.train_valid_generator()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 60, in train_valid_generator
+    self.train_generator = self.train_datagenerator.flow_from_directory(
+AttributeError: 'Training' object has no attribute 'train_datagenerator'
+[2025-03-01 05:35:55,955: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 05:35:55,961: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:35:55,971: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:35:55,973: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:35:55,976: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 05:35:55,978: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:36:19,260: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:36:19,995: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:36:19,995: INFO: main: *************************************]
+[2025-03-01 05:36:19,995: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 05:36:20,008: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:36:20,012: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:36:20,014: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:36:20,015: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 05:36:20,823: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 05:36:21,423: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:36:21,426: INFO: main: *******************************]
+[2025-03-01 05:36:21,426: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 05:36:21,429: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:36:21,429: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:36:21,429: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:36:21,434: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 05:36:22,063: ERROR: main: 'TrainingConfig' object has no attribute 'params_epochs']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_03_model_trainer.py", line 21, in main
+    training.train()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_trainer.py", line 77, in train
+    epochs=self.config.params_epochs,
+AttributeError: 'TrainingConfig' object has no attribute 'params_epochs'
+[2025-03-01 05:38:35,712: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-03-01 05:38:35,717: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:38:35,722: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:38:35,723: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:38:35,723: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-03-01 05:38:35,725: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:39:00,193: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-01 05:39:01,051: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:39:01,055: INFO: main: *************************************]
+[2025-03-01 05:39:01,055: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-03-01 05:39:01,057: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:39:01,063: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:39:01,065: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:39:01,065: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-03-01 05:39:01,987: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-01 05:39:02,468: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-03-01 05:39:02,469: INFO: main: *******************************]
+[2025-03-01 05:39:02,469: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-03-01 05:39:02,473: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-01 05:39:02,482: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-01 05:39:02,484: INFO: commons: created directory at: artifacts]
+[2025-03-01 05:39:02,484: INFO: commons: created directory at: artifacts\training]
+[2025-03-01 05:40:20,817: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-03-06 14:34:11,674: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-06 14:34:11,707: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-06 14:34:11,710: INFO: commons: created directory at: artifacts]
+[2025-03-06 14:38:44,700: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-06 14:38:44,720: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-06 14:38:44,720: INFO: commons: created directory at: artifacts]
+[2025-03-06 14:39:12,620: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-06 14:39:13,501: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmpb3af4m_m\model\data\model\assets]
+[2025-03-06 14:40:25,871: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow-artifacts/artifacts/1535fb34354f407186c3f23b2c589493/6350310b859044d5b8191ff8041633fb/artifacts/artifacts/training/model.h5/data/model/variables/variables.data-00000-of-00001]
+[2025-03-06 14:43:12,608: WARNING: connectionpool: Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000295D8F94430>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond')': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow/runs/update]
+[2025-03-06 14:43:32,265: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-06 14:43:32,270: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-06 14:43:32,272: INFO: commons: created directory at: artifacts]
+[2025-03-06 14:44:01,474: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-06 14:44:02,223: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmprc2j4tyk\model\data\model\assets]
+[2025-03-06 14:45:25,846: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow-artifacts/artifacts/1535fb34354f407186c3f23b2c589493/72baf563e8524aa18860e12e1c330a53/artifacts/artifacts/training/model.h5/data/model/variables/variables.data-00000-of-00001]
+[2025-03-06 14:48:35,410: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-06 14:48:35,415: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-06 14:48:35,417: INFO: commons: created directory at: artifacts]
+[2025-03-06 14:49:00,622: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow/runs/create]
+[2025-03-06 14:49:03,636: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-06 14:49:04,388: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmp969vixeh\model\data\model\assets]
+[2025-03-06 15:36:42,861: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-03-06 15:36:42,884: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-03-06 15:36:42,889: INFO: commons: created directory at: artifacts]
+[2025-03-06 15:37:14,222: INFO: commons: json file saved at scores.json]
+[2025-03-06 15:37:18,196: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-06 15:37:19,259: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmpb1ozx847\model\data\model\assets]
+[2025-04-10 01:14:58,317: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:14:58,334: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:14:58,340: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:14:58,344: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:14:58,344: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:14:58,344: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:17:40,171: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:17:41,095: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:17:41,108: INFO: main: *************************************]
+[2025-04-10 01:17:41,109: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:17:41,121: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:17:41,129: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:17:41,130: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:17:41,134: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:17:42,256: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:17:42,800: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:17:42,800: INFO: main: *******************************]
+[2025-04-10 01:17:42,802: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:17:42,803: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:17:42,809: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:17:42,810: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:17:42,811: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 01:19:01,084: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 01:19:01,084: INFO: main: *************************************]
+[2025-04-10 01:19:01,084: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 01:19:01,091: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:19:01,096: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:19:01,098: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:19:25,367: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:19:25,367: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:19:28,276: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-10 01:19:29,492: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\assets]
+[2025-04-10 01:19:46,471: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\conda.yaml -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model]
+[2025-04-10 01:19:46,486: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data]
+[2025-04-10 01:19:46,492: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\keras_module.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data]
+[2025-04-10 01:19:46,493: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model]
+[2025-04-10 01:19:46,496: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model\assets]
+[2025-04-10 01:19:46,499: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\fingerprint.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model]
+[2025-04-10 01:19:46,501: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\keras_metadata.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model]
+[2025-04-10 01:19:46,505: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\saved_model.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model]
+[2025-04-10 01:19:46,542: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model\variables]
+[2025-04-10 01:19:46,544: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\variables\variables.data-00000-of-00001 -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model\variables]
+[2025-04-10 01:19:46,720: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\model\variables\variables.index -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data\model\variables]
+[2025-04-10 01:19:46,724: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\data\save_format.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model\data]
+[2025-04-10 01:19:46,730: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\MLmodel -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model]
+[2025-04-10 01:19:46,736: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\python_env.yaml -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model]
+[2025-04-10 01:19:46,777: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmp3cdx4hrx\model\requirements.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\22b9237b8fc54ae790a3048c81e7fb85\artifacts\model]
+[2025-04-10 01:19:46,868: INFO: main: >>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-10 01:24:34,946: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:24:34,950: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:24:34,952: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:24:34,954: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:24:34,954: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:24:34,956: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:25:07,268: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:25:08,193: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:25:08,196: INFO: main: *************************************]
+[2025-04-10 01:25:08,196: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:25:08,209: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:25:08,211: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:25:08,219: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:25:08,222: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:25:09,230: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:25:09,806: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:25:09,808: INFO: main: *******************************]
+[2025-04-10 01:25:09,809: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:25:09,811: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:25:09,818: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:25:09,819: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:25:09,821: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 01:26:31,135: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 01:26:31,135: INFO: main: *************************************]
+[2025-04-10 01:26:31,135: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 01:26:31,137: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:26:31,145: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:26:31,145: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:26:55,370: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:26:55,372: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:26:55,826: INFO: main: >>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-10 01:33:34,655: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:33:34,658: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:33:34,660: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:33:34,660: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:33:34,662: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:33:34,662: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:35:15,900: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:35:17,054: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:35:17,057: INFO: main: *************************************]
+[2025-04-10 01:35:17,057: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:35:17,060: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:35:17,065: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:35:17,066: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:35:17,067: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:35:17,988: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:35:18,364: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:35:18,367: INFO: main: *******************************]
+[2025-04-10 01:35:18,367: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:35:18,371: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:35:18,375: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:35:18,378: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:35:18,379: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 01:36:35,427: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 01:36:35,427: INFO: main: *************************************]
+[2025-04-10 01:36:35,427: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 01:36:35,429: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:36:35,435: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:36:35,438: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:37:00,369: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:37:00,371: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:37:00,836: INFO: main: >>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-10 01:39:08,472: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:39:08,478: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:39:08,479: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:39:08,479: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:39:08,482: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:39:08,482: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:40:44,740: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:40:45,649: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:40:45,656: INFO: main: *************************************]
+[2025-04-10 01:40:45,656: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:40:45,667: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:40:45,682: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:40:45,691: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:40:45,692: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:40:46,596: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:40:46,997: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:40:46,999: INFO: main: *******************************]
+[2025-04-10 01:40:46,999: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:40:47,002: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:40:47,005: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:40:47,007: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:40:47,008: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 01:42:05,352: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 01:42:05,352: INFO: main: *************************************]
+[2025-04-10 01:42:05,354: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 01:42:05,359: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:42:05,363: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:42:05,365: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:42:30,122: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:42:30,122: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:42:33,119: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-10 01:42:34,089: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\assets]
+[2025-04-10 01:42:50,446: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\conda.yaml -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5]
+[2025-04-10 01:42:50,453: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data]
+[2025-04-10 01:42:50,456: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\keras_module.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data]
+[2025-04-10 01:42:50,460: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model]
+[2025-04-10 01:42:50,460: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model\assets]
+[2025-04-10 01:42:50,466: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\fingerprint.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model]
+[2025-04-10 01:42:50,470: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\keras_metadata.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model]
+[2025-04-10 01:42:50,471: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\saved_model.pb -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model]
+[2025-04-10 01:42:50,476: INFO: dir_util: creating C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model\variables]
+[2025-04-10 01:42:50,481: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\variables\variables.data-00000-of-00001 -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model\variables]
+[2025-04-10 01:42:50,614: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\model\variables\variables.index -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data\model\variables]
+[2025-04-10 01:42:50,622: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\data\save_format.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5\data]
+[2025-04-10 01:42:50,624: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\MLmodel -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5]
+[2025-04-10 01:42:50,627: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\python_env.yaml -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5]
+[2025-04-10 01:42:50,638: INFO: file_util: copying C:\Users\FOR_CH~1\AppData\Local\Temp\tmpa90oktmi\model\requirements.txt -> C:\Users\FOR_CHRIST_my_LOVE\Desktop\end-to-end-mlops-dvc-mlflow\mlruns\0\8ebf64ab4eff4159be73ea44dd01b731\artifacts\artifacts\training\model.h5]
+[2025-04-10 01:42:51,983: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    obj.main()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\pipeline\stage_04_model_evaluation.py", line 19, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\model_evaluation_mlflow.py", line 79, in log_into_mlflow
+    mlflow.keras.log_model(self.model, artifact_path="artifacts/training/model.h5", registered_model_name="VGG16Model")
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\models\model.py", line 562, in log
+    mlflow.register_model(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 77, in register_model
+    raise e
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 68, in register_model
+    create_model_response = client.create_registered_model(name)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\tracking\client.py", line 1743, in create_registered_model
+    return self._get_registry_client().create_registered_model(name, tags, description)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 63, in create_registered_model
+    return self.store.create_registered_model(name, tags, description)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\store\model_registry\rest_store.py", line 75, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2025-04-10 01:50:18,615: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:50:18,617: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:50:18,617: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:50:18,622: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:50:18,623: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:50:18,625: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:52:25,569: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:52:26,389: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:52:26,389: INFO: main: *************************************]
+[2025-04-10 01:52:26,397: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:52:26,402: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:52:26,409: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:52:26,412: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:52:26,415: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:52:27,472: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:52:28,133: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:52:28,133: INFO: main: *******************************]
+[2025-04-10 01:52:28,134: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:52:28,138: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:52:28,140: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:52:28,140: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:52:28,143: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 01:53:47,838: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 01:53:47,838: INFO: main: *************************************]
+[2025-04-10 01:53:47,842: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 01:53:47,853: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:53:47,885: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:53:47,898: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:54:14,309: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:54:14,311: INFO: commons: json file saved at scores.json]
+[2025-04-10 01:54:16,501: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-04-10 01:54:16,510: INFO: helpers: Accessing as unworthyslaveTOCHRIST]
+[2025-04-10 01:54:17,193: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow "HTTP/1.1 200 OK"]
+[2025-04-10 01:54:17,739: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-04-10 01:54:17,766: INFO: helpers: Initialized MLflow to track repo "unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow"]
+[2025-04-10 01:54:17,769: INFO: helpers: Repository unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow initialized!]
+[2025-04-10 01:54:23,372: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-10 01:54:24,321: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmp5blmiuad\model\data\model\assets]
+[2025-04-10 01:56:24,098: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow-artifacts/artifacts/1535fb34354f407186c3f23b2c589493/7f8cbee7c2ad404da91cc6cc7a2ce712/artifacts/artifacts/training/model.h5/data/model/variables/variables.data-00000-of-00001]
+[2025-04-10 01:57:37,539: INFO: model_evaluation_mlflow: Graciously logged model to mlflow]
+[2025-04-10 01:57:37,893: INFO: main: >>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-10 01:58:36,847: INFO: main: >>>>>>> stage: Date Ingestion Stage started <<<<<<<]
+[2025-04-10 01:58:36,851: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:58:36,866: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:58:36,866: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:58:36,871: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-10 01:58:36,872: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:59:10,687: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-10 01:59:11,415: INFO: main: >>>>>>> stage: Date Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:59:11,415: INFO: main: *************************************]
+[2025-04-10 01:59:11,415: INFO: main: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-10 01:59:11,415: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:59:11,415: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:59:11,415: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:59:11,428: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-10 01:59:12,324: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-10 01:59:12,687: INFO: main: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-10 01:59:12,687: INFO: main: *******************************]
+[2025-04-10 01:59:12,687: INFO: main: >>>>>>>> stage Model Training Stage started <<<<<<<<<<<]
+[2025-04-10 01:59:12,692: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 01:59:12,698: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 01:59:12,699: INFO: commons: created directory at: artifacts]
+[2025-04-10 01:59:12,700: INFO: commons: created directory at: artifacts\training]
+[2025-04-10 02:03:00,670: INFO: main: >>>>>>>>>>>>> stage Model Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-10 02:03:00,670: INFO: main: *************************************]
+[2025-04-10 02:03:00,670: INFO: main: >>>>>>>>>>>>>>>> Model Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-10 02:03:00,675: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-10 02:03:00,678: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-10 02:03:00,679: INFO: commons: created directory at: artifacts]
+[2025-04-10 02:03:25,333: INFO: commons: json file saved at scores.json]
+[2025-04-10 02:03:25,336: INFO: commons: json file saved at scores.json]
+[2025-04-10 02:03:29,125: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-04-10 02:03:29,152: INFO: helpers: Accessing as unworthyslaveTOCHRIST]
+[2025-04-10 02:03:31,863: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow "HTTP/1.1 200 OK"]
+[2025-04-10 02:03:36,172: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-04-10 02:03:36,178: INFO: helpers: Initialized MLflow to track repo "unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow"]
+[2025-04-10 02:03:36,188: INFO: helpers: Repository unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow initialized!]
+[2025-04-10 02:03:56,306: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))': /unworthyslaveTOCHRIST/end-to-end-mlops-dvc-mlflow.mlflow/api/2.0/mlflow/runs/create]
+[2025-04-10 02:04:01,365: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-10 02:04:02,366: INFO: builder_impl: Assets written to: C:\Users\FOR_CH~1\AppData\Local\Temp\tmp02guzztk\model\data\model\assets]
+[2025-04-10 02:19:18,311: INFO: model_evaluation_mlflow: Graciously logged model to mlflow]
+[2025-04-10 02:19:19,384: INFO: main: >>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-15 01:50:49,785: INFO: stage_01_data_ingestion: >>>>>>> stage: Data Ingestion Stage started <<<<<<<]
+[2025-04-15 01:50:49,792: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 01:50:49,794: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 01:50:49,794: INFO: commons: created directory at: artifacts]
+[2025-04-15 01:50:49,794: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-15 01:50:49,794: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-15 01:51:00,263: ERROR: stage_01_data_ingestion: ('Connection aborted.', OSError(0, 'Error'))]
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\ssl_.py", line 458, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\ssl_.py", line 502, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\ssl_.py", line 458, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\urllib3\util\ssl_.py", line 502, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(0, 'Error'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/GTLJC_cnnClassifier/pipeline/stage_01_data_ingestion.py", line 31, in <module>
+    obj.main()
+  File "src/GTLJC_cnnClassifier/pipeline/stage_01_data_ingestion.py", line 23, in main
+    data_ingestion.download_file()
+  File "c:\users\for_christ_my_love\desktop\end-to-end-mlops-dvc-mlflow\src\GTLJC_cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix,zip_download_dir)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\FOR_CHRIST_my_LOVE\anaconda3\envs\GTLJC_forTheLord\lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(0, 'Error'))
+[2025-04-15 01:52:21,124: INFO: stage_01_data_ingestion: >>>>>>> stage: Data Ingestion Stage started <<<<<<<]
+[2025-04-15 01:52:21,127: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 01:52:21,129: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 01:52:21,129: INFO: commons: created directory at: artifacts]
+[2025-04-15 01:52:21,131: INFO: commons: created directory at: artifacts/data_ingestion]
+[2025-04-15 01:52:21,131: INFO: data_ingestion: Graciously downloading data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-15 01:52:51,410: INFO: data_ingestion: Graciously downloaded data from https://drive.google.com/file/d/1bGoP_uoXrwqR2EfiorLvDiD-vS0HdE1j/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-04-15 01:52:52,352: INFO: stage_01_data_ingestion: >>>>>>> stage: Data Ingestion Stage completed <<<<<<<
+
+x=============x]
+[2025-04-15 01:53:14,844: INFO: stage_02_prepare_base_model: *************************************]
+[2025-04-15 01:53:14,844: INFO: stage_02_prepare_base_model: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-15 01:53:14,849: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 01:53:14,851: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 01:53:14,851: INFO: commons: created directory at: artifacts]
+[2025-04-15 01:53:14,854: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-15 01:53:15,732: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-15 01:53:16,097: INFO: stage_02_prepare_base_model: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-15 01:53:25,805: INFO: stage_03_model_trainer: *******************************]
+[2025-04-15 01:53:25,805: INFO: stage_03_model_trainer: >>>>>>>> stage Training Stage started <<<<<<<<<<<]
+[2025-04-15 01:53:25,808: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 01:53:25,830: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 01:53:25,837: INFO: commons: created directory at: artifacts]
+[2025-04-15 01:53:25,838: INFO: commons: created directory at: artifacts\training]
+[2025-04-15 01:57:11,489: INFO: stage_03_model_trainer: >>>>>>>>>>>>> stage Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-15 01:57:24,111: INFO: stage_04_model_evaluation: *************************************]
+[2025-04-15 01:57:24,112: INFO: stage_04_model_evaluation: >>>>>>>>>>>>>>>> Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-15 01:57:24,113: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 01:57:24,117: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 01:57:24,117: INFO: commons: created directory at: artifacts]
+[2025-04-15 01:57:46,944: INFO: commons: json file saved at scores.json]
+[2025-04-15 01:57:46,946: INFO: commons: json file saved at scores.json]
+[2025-04-15 01:57:46,947: INFO: stage_04_model_evaluation: >>>>>>>>> stage Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]
+[2025-04-15 02:21:27,129: INFO: stage_02_prepare_base_model: *************************************]
+[2025-04-15 02:21:27,131: INFO: stage_02_prepare_base_model: >>>>>>> stage: Prepare Base Model Stage started <<<<<<<]
+[2025-04-15 02:21:27,133: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 02:21:27,137: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 02:21:27,137: INFO: commons: created directory at: artifacts]
+[2025-04-15 02:21:27,139: INFO: commons: created directory at: artifacts/prepare_base_model]
+[2025-04-15 02:21:27,694: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-15 02:21:28,025: INFO: stage_02_prepare_base_model: >>>>>>> stage: Prepare Base Model Stage completed <<<<<<<
+
+x=============x]
+[2025-04-15 02:21:37,971: INFO: stage_03_model_trainer: *******************************]
+[2025-04-15 02:21:37,971: INFO: stage_03_model_trainer: >>>>>>>> stage Training Stage started <<<<<<<<<<<]
+[2025-04-15 02:21:37,972: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 02:21:37,982: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 02:21:37,983: INFO: commons: created directory at: artifacts]
+[2025-04-15 02:21:37,983: INFO: commons: created directory at: artifacts\training]
+[2025-04-15 02:26:34,311: INFO: stage_03_model_trainer: >>>>>>>>>>>>> stage Training Stage completed <<<<<<<<<<<<<<<<<<<<
+
+x====================x]
+[2025-04-15 02:26:46,520: INFO: stage_04_model_evaluation: *************************************]
+[2025-04-15 02:26:46,520: INFO: stage_04_model_evaluation: >>>>>>>>>>>>>>>> Evaluation Stage started <<<<<<<<<<<<<<<<<<<]
+[2025-04-15 02:26:46,533: INFO: commons: yaml file: config\config.yaml loaded Graciously successfully]
+[2025-04-15 02:26:46,540: INFO: commons: yaml file: params.yaml loaded Graciously successfully]
+[2025-04-15 02:26:46,540: INFO: commons: created directory at: artifacts]
+[2025-04-15 02:27:21,646: INFO: commons: json file saved at scores.json]
+[2025-04-15 02:27:21,646: INFO: commons: json file saved at scores.json]
+[2025-04-15 02:27:21,648: INFO: stage_04_model_evaluation: >>>>>>>>> stage Evaluation Stage completed  <<<<<<<<<<<<
+
+x===============x]

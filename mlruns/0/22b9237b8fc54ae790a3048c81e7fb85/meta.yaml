@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/FOR_CHRIST_my_LOVE/Desktop/end-to-end-mlops-dvc-mlflow/mlruns/0/22b9237b8fc54ae790a3048c81e7fb85/artifacts
+end_time: 1744244386860
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 22b9237b8fc54ae790a3048c81e7fb85
+run_name: delicate-ape-820
+run_uuid: 22b9237b8fc54ae790a3048c81e7fb85
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744244365770
+status: 3
+tags: []
+user_id: FOR_CHRIST_my_LOVE

@@ -12,3 +12,12 @@
 7.  Update the pipeline
 8.  Update the main.py
 9.  Update the dvc.yaml
+
+# BY GOD'S GRACE ALONE, Gracious information from DVC
+import dagshub
+dagshub.init(repo_owner='unworthyslaveTOCHRIST', repo_name='end-to-end-mlops-dvc-mlflow', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)

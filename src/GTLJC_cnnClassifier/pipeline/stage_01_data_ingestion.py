@@ -1,7 +1,14 @@
-# BY GOD'S GRACE ALONE
+# BY GOD'S GRACE ALONE\
+# import sys
+# print("System path", sys.path)
+
+import sys
+sys.path.append("c:\\users\\for_christ_my_love\\desktop\\end-to-end-mlops-dvc-mlflow\\src")
+
 from GTLJC_cnnClassifier.config.configuration import ConfigurationManager
 from GTLJC_cnnClassifier.components.data_ingestion import DataIngestion
 from GTLJC_cnnClassifier import GTLJC_logger
+
 
 STAGE_NAME = "Data Ingestion Stage"
 

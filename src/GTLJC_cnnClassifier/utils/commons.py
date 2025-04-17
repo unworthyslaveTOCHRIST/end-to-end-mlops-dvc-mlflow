@@ -7,11 +7,14 @@ from GTLJC_cnnClassifier import GTLJC_logger
 import json
 import joblib
 from ensure import ensure_annotations
-from box import ConfigBox
+from box.config_box import ConfigBox
+from box.exceptions import BoxError
 from pathlib import Path
 from typing import Any
 import base64
 
+# class BoxValueError(BoxError, ValueError):
+#     """Issue doing something with that value"""
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
